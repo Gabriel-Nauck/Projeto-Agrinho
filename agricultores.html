@@ -2,77 +2,10 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="agricultores.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria de Imagens</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Gradiente futurista */
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-        }
 
-        .image-gallery {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            max-width: 90vw;
-            max-height: 90vh;
-        }
-
-        .image-gallery img {
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-        }
-
-        .image-gallery img:hover {
-            transform: scale(1.1);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-        }
-
-        .image-gallery .side-image,
-        .image-gallery .side-image-bottom {
-            width: 300px;
-            height: 200px;
-            position: absolute;
-        }
-
-        .image-gallery .side-image {
-            top: 10px;
-        }
-
-        .image-gallery .side-image:nth-of-type(1) {
-            left: -300px;
-        }
-
-        .image-gallery .side-image:nth-of-type(2) {
-            right: -300px;
-        }
-
-        .image-gallery .center-image {
-            width: 600px;
-            height: 650px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .image-gallery img.enlarged {
-            transform: scale(1.5);
-            z-index: 2;
-        }
-
-        .image-gallery .center-image:hover {
-            border: 5px solid #fff;
-        }
-    </style>
 </head>
 <body>
     <div class="image-gallery">
