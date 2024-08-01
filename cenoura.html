@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Imagens</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+        }
+
+        .image-gallery img {
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .image-gallery .side-image,
+        .image-gallery .side-image-bottom {
+            width: 300px; /* Aumentei a largura das imagens laterais */
+            height: 200px; /* Aumentei a altura das imagens laterais */
+            position: absolute;
+        }
+
+        .image-gallery .side-image {
+            top: 10px;
+        }
+
+        .image-gallery .side-image:nth-of-type(1) {
+            left: -300px; /* Ajustei a posição para corresponder ao novo tamanho */
+        }
+
+        .image-gallery .side-image:nth-of-type(2) {
+            right: -300px; /* Ajustei a posição para corresponder ao novo tamanho */
+        }
+
+        .image-gallery .center-image {
+            width: 600px; /* Aumentei a largura da imagem central */
+            height: 650px; /* Aumentei a altura da imagem central */
+            position: relative;
+            z-index: 1;
+        }
+
+        .image-gallery img.enlarged {
+            transform: scale(1.5);
+            z-index: 2;
+        }
+
+        .image-gallery .center-image:hover {
+            border: 5px solid #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-gallery">
+        <img src="https://via.placeholder.com/300x200?text=Imagem+1" alt="Imagem 1" class="side-image" id="img1" onclick="toggleAllImages()">
+        <img src="https://via.placeholder.com/300x200?text=Imagem+2" alt="Imagem 2" class="side-image" id="img2" onclick="toggleAllImages()">
+        <img src="cul" alt="Imagem Central" class="center-image" onclick="toggleAllImages()">
+        <img src="https://via.placeholder.com/300x200?text=Imagem+3" alt="Imagem 3" class="side-image" id="img3" onclick="toggleAllImages()" style="top: 420px; left: -300px;">
+        <img src="https://img2.gratispng.com/20180709/jy/aawcdkox1.webp" alt="Imagem 4" class="side-image" id="img4" onclick="toggleAllImages()" style="top: 420px; right: -300px;">
+    </div>
+    <script>
+        function toggleAllImages() {
+            document.querySelectorAll('.image-gallery img').forEach(img => img.classList.toggle('enlarged'));
+        }
+    </script>
+</body>
+</html>
