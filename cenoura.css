@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Gradiente futurista */
     margin: 0;
     padding: 0;
     display: flex;
@@ -33,8 +33,8 @@ body {
 
 .image-gallery .side-image,
 .image-gallery .side-image-bottom {
-    width: 300px; /* Aumentei a largura das imagens laterais */
-    height: 200px; /* Aumentei a altura das imagens laterais */
+    width: 300px;
+    height: 200px;
     position: absolute;
 }
 
@@ -43,16 +43,16 @@ body {
 }
 
 .image-gallery .side-image:nth-of-type(1) {
-    left: -300px; /* Ajustei a posição para corresponder ao novo tamanho */
+    left: -300px;
 }
 
 .image-gallery .side-image:nth-of-type(2) {
-    right: -300px; /* Ajustei a posição para corresponder ao novo tamanho */
+    right: -300px;
 }
 
 .image-gallery .center-image {
-    width: 600px; /* Aumentei a largura da imagem central */
-    height: 650px; /* Aumentei a altura da imagem central */
+    width: 600px;
+    height: 650px;
     position: relative;
     z-index: 1;
 }
