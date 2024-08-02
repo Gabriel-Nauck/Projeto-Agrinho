@@ -4,16 +4,30 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="energias.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria de Imagens</title>
+    <title>Energias</title>
 
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <img src="2024.png" alt="Logo">
+        </div>
+        <h1>Agrinho 2024</h1>
+        <nav>
+            <ul>
+                <li><a href="cenoura.html">Saúde e Alimentação</a></li>
+                <li><a href="agricultores.html">Cultivando o Futuro</a></li>
+                <li><a href="energias.html">Energias Renováveis</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <div class="image-gallery">
         <img src="aguaaa.png" alt="Imagem 1" class="side-image" id="img1" onclick="toggleAllImages()">
         <img src="eolica.png" alt="Imagem 2" class="side-image" id="img2" onclick="toggleAllImages()">
         <img src="energiarenovavel.png" alt="Imagem Central" class="center-image" onclick="toggleAllImages()">
-        <img src="Gluten.png" alt="Imagem 3" class="side-image" id="img3" onclick="toggleAllImages()" style="top: 420px; left: -300px;">
-        <img src="aguuaa2.png" alt="Imagem 4" class="side-image" id="img4" onclick="toggleAllImages()" style="top: 420px; right: -300px;">
+        <img src="Gluten.png" alt="Imagem 3" class="side-image side-image3" id="img3" onclick="toggleAllImages()">
+        <img src="aguuaa2.png" alt="Imagem 4" class="side-image side-image4" id="img4" onclick="toggleAllImages()">
     </div>
     <script>
         function toggleAllImages() {
