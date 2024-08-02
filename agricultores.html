@@ -5,8 +5,8 @@
     <link rel="stylesheet" href="agricultores.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria de Imagens</title>
-
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -21,13 +21,15 @@
             </ul>
         </nav>
     </header>
+    
     <div class="image-gallery">
         <img src="terrinha.png" alt="Imagem 1" class="side-image" id="img1" onclick="toggleAllImages()">
         <img src="pedrio.png" alt="Imagem 2" class="side-image" id="img2" onclick="toggleAllImages()">
         <img src="cultivandoofuturo.png" alt="Imagem Central" class="center-image" onclick="toggleAllImages()">
-        <img src="agricultora.png" alt="Imagem 3" class="side-image" id="img3" onclick="toggleAllImages()" style="top: 420px; left: -300px;">
-        <img src="velhoagricultor.png" alt="Imagem 4" class="side-image" id="img4" onclick="toggleAllImages()" style="top: 420px; right: -300px;">
+        <img src="agricultora.png" alt="Imagem 3" class="side-image side-image3" id="img3" onclick="toggleAllImages()">
+        <img src="velhoagricultor.png" alt="Imagem 4" class="side-image side-image4" id="img4" onclick="toggleAllImages()">
     </div>
+
     <script>
         function toggleAllImages() {
             document.querySelectorAll('.image-gallery img').forEach(img => img.classList.toggle('enlarged'));
